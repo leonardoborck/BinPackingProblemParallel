@@ -24,5 +24,7 @@ namespace BinPackingProblemParallel.Classes
         {
             Altura = altura; Largura = largura; Demanda = demanda; Area = area; CodigoDoItem = codigoDoItem;
         }
+
+        public Item Clone() => (Item)this.MemberwiseClone();
     }
 }

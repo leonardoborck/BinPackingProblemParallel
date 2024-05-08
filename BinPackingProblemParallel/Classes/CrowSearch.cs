@@ -1,4 +1,6 @@
-﻿namespace BinPackingProblemParallel.Classes
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace BinPackingProblemParallel.Classes
 {
     public class CrowSearch
     {
@@ -11,8 +13,8 @@
             PopulacaoDeCorvos.Clear();
             for (int i = 0; i < tamanhoDaPopulacao; i++)
             {
-                List<Item> itens = Itens.GetRange(0, Itens.Count());
-                List<Recipiente> recipientes = Recipientes.GetRange(0, Recipientes.Count());
+                List<Item> itens = Itens.GetRange(0, Itens.Count);
+                List<Recipiente> recipientes = Recipientes.GetRange(0, Recipientes.Count);
                 Crow novoCorvo = new Crow(itens, recipientes);
                 novoCorvo.GeraSolucaoInicialAleatoria(z);
                 PopulacaoDeCorvos.Add(novoCorvo);
@@ -25,6 +27,11 @@
             PopulacaoDeCorvos = new List<Crow>();
         }
 
+        double Sigmoid(double x)
+        {
+            return 1 / (1 + Math.Exp(-x));
+        }
+
         public Crow BuscaDoCorvo(int flightSize, int z, int maxIteration)
         {
             Parallel.ForEach(PopulacaoDeCorvos, corvo =>
@@ -32,54 +39,67 @@
                 for (int iteration = 0; iteration < maxIteration; iteration++)
                 {
                     double ri = (new Random().Next(11)) / 10.0;
-                    int caraAleatorio = new Random().Next(PopulacaoDeCorvos.Count());
+                    int caraAleatorio = new Random().Next(PopulacaoDeCorvos.Count);
 
-                    for (int j = 0; j < corvo.MemoriaAtual.Count(); j++)
+                    for (int j = 0; j < corvo.MemoriaAtual.Count; j++)
                     { //para cada item
-                        int recipienteDoItemAtual = 0;
-                        for (int k = 0; k < corvo.MemoriaAtual[j].Count(); k++)
+                        int teste = 0;
+                        for (int indiceDoRecipienteAtual = 0; indiceDoRecipienteAtual < corvo.MemoriaAtual[j].Count; indiceDoRecipienteAtual++)
                         { //recipiente que está o item
-                            if (corvo.MemoriaAtual[j][k] == 1)
+                            if (corvo.MemoriaAtual[j][indiceDoRecipienteAtual] == 1)
                             {
-                                recipienteDoItemAtual = k;
+                                teste = indiceDoRecipienteAtual;
                                 break;
                             }
                         }
-                        int recipienteDoMelhorItem = 0;
-                        for (int k = 0; k < PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j].Count(); k++)
-                        { //recipiente que está o item
-                            if (PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j][k] == 1)
-                            {
-                                recipienteDoMelhorItem = k;
-                                break;
+
+                        lock (PopulacaoDeCorvos[caraAleatorio])
+                        {
+                            int recipienteDoMelhorItem = 0;
+                            for (int indiceDoMelhorRecipiente = 0; indiceDoMelhorRecipiente < PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j].Count; indiceDoMelhorRecipiente++)
+                            { //recipiente que está o item
+                                if (PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j][indiceDoMelhorRecipiente] == 1)
+                                {
+                                    recipienteDoMelhorItem = indiceDoMelhorRecipiente;
+                                    break;
+                                }
                             }
-                        }
-                        var novaPosicao = Convert.ToInt32(corvo.MemoriaAtual[j][recipienteDoItemAtual] + flightSize * ri * Math.Abs(PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j][recipienteDoMelhorItem] - corvo.MemoriaAtual[j][recipienteDoItemAtual]));
-                        corvo.MemoriaAtual[j][recipienteDoItemAtual] = 0;
-                        corvo.MemoriaAtual[j][novaPosicao] = 1;
+                            var novaPosicao = Convert.ToInt32(corvo.MemoriaAtual[j][teste] + flightSize * ri * (PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j][recipienteDoMelhorItem] - corvo.MemoriaAtual[j][teste]));
+
+                            corvo.MemoriaAtual[j][teste] = 0;
+                            if (novaPosicao < 0 || novaPosicao >= corvo.MemoriaAtual[j].Count)
+                            {
+                                if (novaPosicao >= corvo.MemoriaAtual[j].Count)
+                                    corvo.MemoriaAtual[j][corvo.MemoriaAtual[j].Count - 1] = 1;
+                                if (novaPosicao < 0)
+                                    corvo.MemoriaAtual[j][0] = 1;
+                                continue;
+                            }
+                            corvo.MemoriaAtual[j][novaPosicao] = 1;
+                        };
                     }
 
                     corvo.CorrigeSolucoesInviaveis();
                     corvo.HouveMelhora(z);
 
-                    BuscaLocal(corvo);
-                    corvo.CorrigeSolucoesInviaveis();
-                    corvo.HouveMelhora(z);
+                    //BuscaLocal(corvo);
+                    //corvo.CorrigeSolucoesInviaveis();
+                    //corvo.HouveMelhora(z);
                 }
             });
 
-            //for (int i = 0; i < PopulacaoDeCorvos.Count(); i++)
+            //for (int i = 0; i < PopulacaoDeCorvos.Count; i++)
             //{
             //    for (int iteration = 0; iteration < maxIteration; iteration++)
             //    {
 
             //        double ri = (new Random().Next(11)) / 10.0;
-            //        int caraAleatorio = new Random().Next(PopulacaoDeCorvos.Count());
+            //        int caraAleatorio = new Random().Next(PopulacaoDeCorvos.Count);
 
-            //        for (int j = 0; j < PopulacaoDeCorvos[i].MemoriaAtual.Count(); j++)
+            //        for (int j = 0; j < PopulacaoDeCorvos[i].MemoriaAtual.Count; j++)
             //        { //para cada item
             //            int recipienteDoItemAtual = 0;
-            //            for (int k = 0; k < PopulacaoDeCorvos[i].MemoriaAtual[j].Count(); k++)
+            //            for (int k = 0; k < PopulacaoDeCorvos[i].MemoriaAtual[j].Count; k++)
             //            { //recipiente que está o item
             //                if (PopulacaoDeCorvos[i].MemoriaAtual[j][k] == 1)
             //                {
@@ -88,7 +108,7 @@
             //                }
             //            }
             //            int recipienteDoMelhorItem = 0;
-            //            for (int k = 0; k < PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j].Count(); k++)
+            //            for (int k = 0; k < PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j].Count; k++)
             //            { //recipiente que está o item
             //                if (PopulacaoDeCorvos[caraAleatorio].MelhorMemoria[j][k] == 1)
             //                {
@@ -112,9 +132,9 @@
             //}
 
             double melhor = 0;
-            double menor = PopulacaoDeCorvos[0].RecipientesAtual.Count();
+            double menor = PopulacaoDeCorvos[0].RecipientesAtual.Count;
             int index = 0;
-            for (int i = 0; i < PopulacaoDeCorvos.Count(); i++)
+            for (int i = 0; i < PopulacaoDeCorvos.Count; i++)
             {
                 if (PopulacaoDeCorvos[i].AvaliacaoDaMelhorSolucao > melhor)
                 {

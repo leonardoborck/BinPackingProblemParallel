@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using System.Text;
 
@@ -9,7 +10,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string[] classes = { "CLASS01" };//, "CLASS02", "CLASS03", "CLASS04", "CLASS05", "CLASS06", "CLASS07", "CLASS08", "CLASS09", "CLASS10"};
+        string[] classes = { "CLASS01", "CLASS02", "CLASS03", "CLASS04", "CLASS05", "CLASS06", "CLASS07", "CLASS08", "CLASS09", "CLASS10"};
         string[] numeroDeItens = { "020", "040", "060", "080", "100" };
         string[] instancias = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" };
 
@@ -37,10 +38,10 @@ internal class Program
         }
 
         const int z = 2;
-        const int flightSize = 2;
-        const int flocksize = 50;
-        const int maxIteration = 100;
-        const int repeticao = 10;
+        const int flightSize = 5;
+        const int flocksize = 35;
+        const int maxIteration = 80;
+        const int repeticao = 30;
 
         ConcurrentBag<string> concurrentBag = new ConcurrentBag<string>();
 
@@ -50,25 +51,25 @@ internal class Program
             {
                 var watch = new System.Diagnostics.Stopwatch();
                 watch.Start();
-                List<Item> itens = baseDeDados.Itens.GetRange(0, baseDeDados.Itens.Count());
-                List<Recipiente> recipientes = baseDeDados.Recipientes.GetRange(0, baseDeDados.Recipientes.Count());
+                List<Item> itens = baseDeDados.Itens.GetRange(0, baseDeDados.Itens.Count);
+                var recipientes = baseDeDados.Recipientes.GetRange(0, baseDeDados.Recipientes.Count);
 
                 CrowSearch crowSearch = new CrowSearch(baseDeDados.Itens, baseDeDados.Recipientes);
                 crowSearch.InicializaCorvos(flocksize, z);
                 Crow corvo = crowSearch.BuscaDoCorvo(flightSize, z, maxIteration);
                 watch.Stop();
 
-                concurrentBag.Add($"{baseDeDados.Nome},{watch.ElapsedMilliseconds},{corvo.AvaliacaoDaMelhorSolucao},{corvo.MelhorRecipientes.Count()}");
+                concurrentBag.Add($"{baseDeDados.Nome},{watch.ElapsedMilliseconds},{corvo.AvaliacaoDaMelhorSolucao},{corvo.MelhorRecipientes.Count},{flocksize},{flightSize},{maxIteration}");
             });
         }
 
-        var arquivoDeTeste = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\teste_{classes[0]}.csv";
+        var arquivoDeTeste = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\teste_completo.csv";//"{classes[0]}.csv";
         File.Delete(arquivoDeTeste);
         try
         {
             using (StreamWriter w = File.AppendText(arquivoDeTeste))
             {
-                w.WriteLine($"Instancia,Tempo(ms),Utilizacao,Recipientes");
+                w.WriteLine($"Instancia,Tempo(ms),Utilizacao,Recipientes,TamanhoDoBando,TamanhoDoVoo,IteracoesMaximas");
                 foreach (string texto in concurrentBag)
                 {
                     w.WriteLine(texto);

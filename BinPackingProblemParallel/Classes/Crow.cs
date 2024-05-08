@@ -20,9 +20,15 @@ namespace BinPackingProblemParallel.Classes
         public List<Recipiente> RecipientesAtual;
         public List<Recipiente> MelhorRecipientes;
 
+        public List<Recipiente> RecipienteOriginal;
+
         public Crow(List<Item> itens, List<Recipiente> recipientes)
         {
-            Itens = itens; RecipientesAtual = recipientes; MelhorRecipientes = recipientes;
+            Itens = itens;
+            RecipientesAtual = recipientes.GetRange(0, recipientes.Count);
+            MelhorRecipientes = recipientes.GetRange(0, recipientes.Count);
+            RecipienteOriginal = recipientes.GetRange(0, recipientes.Count);
+
             MemoriaAtual = new List<List<int>>();
             MelhorMemoria = new List<List<int>>();
             AvaliacaoDaMelhorSolucao = 0;
@@ -32,20 +38,20 @@ namespace BinPackingProblemParallel.Classes
         {
             List<int> recipientes = new List<int>();
 
-            for(int i = 0; i < RecipientesAtual.Count(); i++)
+            for (int i = 0; i < RecipientesAtual.Count; i++)
             {
                 recipientes.Add(0);
             }
 
-            for(int j = 0; j < Itens.Count(); j++)
+            for (int j = 0; j < Itens.Count; j++)
             {
-                List<int> recipienteAtual = recipientes.GetRange(0, recipientes.Count());
+                List<int> recipienteAtual = recipientes.GetRange(0, recipientes.Count);
                 MemoriaAtual.Add(recipienteAtual);
             }
 
-            for (int j = 0; j < MemoriaAtual.Count(); j++)
+            for (int j = 0; j < MemoriaAtual.Count; j++)
             {
-                int qualBin = new Random().Next(MemoriaAtual[j].Count());
+                int qualBin = new Random().Next(MemoriaAtual[j].Count);
                 MemoriaAtual[j][qualBin] = 1;
             }
 
@@ -53,34 +59,35 @@ namespace BinPackingProblemParallel.Classes
             MelhorMemoria = MemoriaAtual;
             MelhorRecipientes = RecipientesAtual;
             AvaliacaoDaMelhorSolucao = AvaliaSolucao(MelhorMemoria, MelhorRecipientes, z);
-
         }
 
         public void CorrigeSolucoesInviaveis()
         {
             List<int> itensRemovidos = new List<int>();
 
-            for(int k = 0;  k < RecipientesAtual.Count(); k++)
+            for (int k = 0; k < RecipientesAtual.Count; k++)
                 RemoveItensDosRecipientesSobrecarregados(itensRemovidos, k);
             ReinsereItensUsandoLeftBottomPolicy(itensRemovidos);
 
             //remove recipiente vazio
             List<int> recipientesParaRemover = new List<int>();
-            for (int k = 0; k < RecipientesAtual.Count(); k++)
+            for (int k = 0; k < RecipientesAtual.Count; k++)
             {
-                if(!IndexDosItensNoRecipiente(k,MemoriaAtual).Any())
-                    recipientesParaRemover.Add(k);          
+                if (!IndexDosItensNoRecipiente(k, MemoriaAtual).Any())
+                    recipientesParaRemover.Add(k);
             }
             //remove da lista
-            foreach (var index in recipientesParaRemover.OrderByDescending(x => x))
+            lock (this)
             {
-                RecipientesAtual.RemoveAt(index);
-                for (int j = 0; j < MemoriaAtual.Count(); j++)
+                foreach (var index in recipientesParaRemover.OrderByDescending(x => x))
                 {
-                    MemoriaAtual[j].RemoveAt(index);
+                    RecipientesAtual.RemoveAt(index);
+                    for (int j = 0; j < MemoriaAtual.Count; j++)
+                    {
+                        MemoriaAtual[j].RemoveAt(index);
+                    }
                 }
-            }
-
+            };
         }
 
         void ReinsereItensUsandoLeftBottomPolicy(List<int> itensRemovidos)
@@ -88,7 +95,7 @@ namespace BinPackingProblemParallel.Classes
             foreach (var itemRemovido in itensRemovidos)
             {
                 bool conseguiuAdicionar = false;
-                for (int k = 0; k < RecipientesAtual.Count(); k++)
+                for (int k = 0; k < RecipientesAtual.Count; k++)
                 {
                     MemoriaAtual[itemRemovido][k] = 1;
                     if (VerificaAUtilizacaoDoRecipiente(k, MemoriaAtual, RecipientesAtual) > 1.0)
@@ -106,29 +113,33 @@ namespace BinPackingProblemParallel.Classes
                 if (conseguiuAdicionar)
                     continue;
 
-                //nao colocou em nenhum recipiente precisa criar um novo.
-                RecipientesAtual.Add(RecipientesAtual[0]); //alterar isso depois para o caso de tamanhos diferentes de recipientes
-
-                for (int j = 0; j < Itens.Count(); j++)
+                lock (this)
                 {
-                    if (itemRemovido == j)
-                        MemoriaAtual[j].Add(1);
-                    else
-                        MemoriaAtual[j].Add(0);
-                }
+                    var teste = RecipienteOriginal[0].Clone();
+                    //nao colocou em nenhum recipiente precisa criar um novo.
+                    RecipientesAtual.Add(teste); //alterar isso depois para o caso de tamanhos diferentes de recipientes
+
+                    for (int j = 0; j < Itens.Count; j++)
+                    {
+                        if (itemRemovido == j)
+                            MemoriaAtual[j].Add(1);
+                        else
+                            MemoriaAtual[j].Add(0);
+                    }
+                };
             }
         }
 
         public void RemoveItensDosRecipientesSobrecarregados(List<int> itensRemovidos, int indexDoRecipiente)
         {
-            while(VerificaAUtilizacaoDoRecipiente(indexDoRecipiente, MemoriaAtual, RecipientesAtual) > 1.0)
+            while (VerificaAUtilizacaoDoRecipiente(indexDoRecipiente, MemoriaAtual, RecipientesAtual) > 1.0)
             {
                 List<int> indexDosItensNoRecipiente = IndexDosItensNoRecipiente(indexDoRecipiente, MemoriaAtual);
 
-                int indexDoindexDoItemParaRemover = new Random().Next(indexDosItensNoRecipiente.Count());
-                while(Existe(itensRemovidos, indexDosItensNoRecipiente[indexDoindexDoItemParaRemover]))
+                int indexDoindexDoItemParaRemover = new Random().Next(indexDosItensNoRecipiente.Count);
+                while (Existe(itensRemovidos, indexDosItensNoRecipiente[indexDoindexDoItemParaRemover]))
                 {
-                    indexDoindexDoItemParaRemover = new Random().Next(indexDosItensNoRecipiente.Count());
+                    indexDoindexDoItemParaRemover = new Random().Next(indexDosItensNoRecipiente.Count);
                 }
                 MemoriaAtual[indexDosItensNoRecipiente[indexDoindexDoItemParaRemover]][indexDoRecipiente] = 0;
                 itensRemovidos.Add(indexDosItensNoRecipiente[indexDoindexDoItemParaRemover]);
@@ -137,7 +148,7 @@ namespace BinPackingProblemParallel.Classes
 
         bool Existe(List<int> itensRemovidos, int item)
         {
-            for (int i = 0; i < itensRemovidos.Count(); i++)
+            for (int i = 0; i < itensRemovidos.Count; i++)
             {
                 if (itensRemovidos[i] == item)
                     return true;
@@ -148,10 +159,10 @@ namespace BinPackingProblemParallel.Classes
         public double AvaliaSolucao(List<List<int>> solucao, List<Recipiente> recipientes, int z)
         {
             double soma = 0;
-            for (int i = 0; i < recipientes.Count(); i++)
+            for (int i = 0; i < recipientes.Count; i++)
                 soma += Math.Pow(VerificaAUtilizacaoDoRecipiente(i, solucao, recipientes), z);
 
-            double numeroDeRecipientesUtilizados = recipientes.Count();
+            double numeroDeRecipientesUtilizados = recipientes.Count;
 
             return soma / numeroDeRecipientesUtilizados;
         }
@@ -159,7 +170,7 @@ namespace BinPackingProblemParallel.Classes
         public double VerificaAUtilizacaoDoRecipiente(int indexDoRecipiente, List<List<int>> solucao, List<Recipiente> recipientes)
         {
             double somaItens = 0;
-            for (int j = 0; j < Itens.Count(); j++)
+            for (int j = 0; j < Itens.Count; j++)
             {
                 if (solucao[j][indexDoRecipiente] == 1)
                     somaItens += Itens[j].Altura * Itens[j].Largura;
@@ -171,7 +182,7 @@ namespace BinPackingProblemParallel.Classes
         List<int> IndexDosItensNoRecipiente(int indexDoRecipiente, List<List<int>> solucao)
         {
             List<int> indexDosItens = new List<int>();
-            for (int j = 0; j < Itens.Count(); j++)
+            for (int j = 0; j < Itens.Count; j++)
             {
                 if (solucao[j][indexDoRecipiente] == 1)
                 {
@@ -197,10 +208,13 @@ namespace BinPackingProblemParallel.Classes
 
         public void ItemShuffle()
         {
-            int primeiroItem = new Random().Next(MemoriaAtual.Count());
+            if (MemoriaAtual[0].Count < 2)
+                return;
+
+            int primeiroItem = new Random().Next(MemoriaAtual.Count);
             int recipienteDoPrimeiroItem = 0;
 
-            for (int k = 0; k < MemoriaAtual[primeiroItem].Count(); k++)
+            for (int k = 0; k < MemoriaAtual[primeiroItem].Count; k++)
             {
                 if (MemoriaAtual[primeiroItem][k] == 1)
                 {
@@ -212,8 +226,8 @@ namespace BinPackingProblemParallel.Classes
             int recipienteDoSegundoItem = 0;
             do
             {
-                segundoItem = new Random().Next(MemoriaAtual.Count());
-                for (int k = 0; k < MemoriaAtual[segundoItem].Count(); k++)
+                segundoItem = new Random().Next(MemoriaAtual.Count);
+                for (int k = 0; k < MemoriaAtual[segundoItem].Count; k++)
                 {
                     if (MemoriaAtual[segundoItem][k] == 1)
                     {
@@ -232,22 +246,28 @@ namespace BinPackingProblemParallel.Classes
 
         public void BinDelete()
         {
-            int recipienteParaRemover = new Random().Next(MemoriaAtual[0].Count());
-
-            List<int> itensRemovidos = new List<int>();
-            for (int j = 0; j < MemoriaAtual.Count(); j++)
+            lock (this)
             {
-                if (MemoriaAtual[j][recipienteParaRemover] == 1)
-                    itensRemovidos.Add(j);
-            }
+                if (MemoriaAtual[0].Count < 2)
+                   return;
 
-            RecipientesAtual.RemoveAt(recipienteParaRemover);
-            for (int i = 0; i < MemoriaAtual.Count(); i++)
-            {
-                MemoriaAtual[i].RemoveAt(recipienteParaRemover);
-            }
+                int recipienteParaRemover = new Random().Next(RecipientesAtual.Count);
 
-            ReinsereItensUsandoLeftBottomPolicy(itensRemovidos);
+                List<int> itensRemovidos = new List<int>();
+                for (int j = 0; j < MemoriaAtual.Count; j++)
+                {
+                    if (MemoriaAtual[j][recipienteParaRemover] == 1)
+                        itensRemovidos.Add(j);
+                }
+
+                RecipientesAtual.RemoveAt(recipienteParaRemover);
+                for (int i = 0; i < MemoriaAtual.Count; i++)
+                {
+                    MemoriaAtual[i].RemoveAt(recipienteParaRemover);
+                }
+
+                ReinsereItensUsandoLeftBottomPolicy(itensRemovidos);
+            };
         }
     }
 }

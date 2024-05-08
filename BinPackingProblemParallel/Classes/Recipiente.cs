@@ -22,5 +22,7 @@ namespace BinPackingProblemParallel.Classes
         {
             Altura = altura; Largura = largura; Custo = custo; CodigoDoRecipiente = codigoDoRecipiente;
         }
+
+        public Recipiente Clone() => (Recipiente)this.MemberwiseClone();
     }
 }
