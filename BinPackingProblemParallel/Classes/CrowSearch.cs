@@ -8,14 +8,14 @@ namespace BinPackingProblemParallel.Classes
         public List<Item> Itens;
         public List<Recipiente> Recipientes;
 
-        public void InicializaCorvos(int tamanhoDaPopulacao, int z)
+        public void InicializaCorvos(int tamanhoDaPopulacao, int z, bool ehTamanhoAleatorio)
         {
             PopulacaoDeCorvos.Clear();
             for (int i = 0; i < tamanhoDaPopulacao; i++)
             {
                 List<Item> itens = Itens.GetRange(0, Itens.Count);
                 List<Recipiente> recipientes = Recipientes.GetRange(0, Recipientes.Count);
-                Crow novoCorvo = new Crow(itens, recipientes);
+                Crow novoCorvo = new Crow(itens, recipientes, ehTamanhoAleatorio);
                 novoCorvo.GeraSolucaoInicialAleatoria(z);
                 PopulacaoDeCorvos.Add(novoCorvo);
             }
@@ -82,9 +82,9 @@ namespace BinPackingProblemParallel.Classes
                     corvo.CorrigeSolucoesInviaveis();
                     corvo.HouveMelhora(z);
 
-                    //BuscaLocal(corvo);
-                    //corvo.CorrigeSolucoesInviaveis();
-                    //corvo.HouveMelhora(z);
+                    BuscaLocal(corvo);
+                    corvo.CorrigeSolucoesInviaveis();
+                    corvo.HouveMelhora(z);
                 }
             });
 

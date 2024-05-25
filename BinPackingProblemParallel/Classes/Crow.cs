@@ -22,12 +22,20 @@ namespace BinPackingProblemParallel.Classes
 
         public List<Recipiente> RecipienteOriginal;
 
-        public Crow(List<Item> itens, List<Recipiente> recipientes)
+        public bool EhTamanhoAleatorio;
+
+        public Crow(List<Item> itens, List<Recipiente> recipientes, bool ehTamanhoAleatorio)
         {
+            EhTamanhoAleatorio = ehTamanhoAleatorio;
             Itens = itens;
-            RecipientesAtual = recipientes.GetRange(0, recipientes.Count);
-            MelhorRecipientes = recipientes.GetRange(0, recipientes.Count);
-            RecipienteOriginal = recipientes.GetRange(0, recipientes.Count);
+            RecipienteOriginal = recipientes;
+
+            RecipientesAtual = new List<Recipiente>();
+            MelhorRecipientes = new List<Recipiente>();
+            var recipienteInicial = CriaNovoRecipiente(recipientes);
+
+            RecipientesAtual.Add(recipienteInicial.Clone());
+            MelhorRecipientes.Add(recipienteInicial.Clone());
 
             MemoriaAtual = new List<List<int>>();
             MelhorMemoria = new List<List<int>>();
@@ -98,7 +106,7 @@ namespace BinPackingProblemParallel.Classes
                 for (int k = 0; k < RecipientesAtual.Count; k++)
                 {
                     MemoriaAtual[itemRemovido][k] = 1;
-                    if (VerificaAUtilizacaoDoRecipiente(k, MemoriaAtual, RecipientesAtual) > 1.0)
+                    if (VerificaAUtilizacaoDoRecipiente(k, MemoriaAtual, RecipientesAtual) > 1)
                     {
                         MemoriaAtual[itemRemovido][k] = 0;
                         continue;
@@ -115,9 +123,13 @@ namespace BinPackingProblemParallel.Classes
 
                 lock (this)
                 {
-                    var teste = RecipienteOriginal[0].Clone();
                     //nao colocou em nenhum recipiente precisa criar um novo.
-                    RecipientesAtual.Add(teste); //alterar isso depois para o caso de tamanhos diferentes de recipientes
+                    Recipiente novoRecipiente;
+                    do
+                    {
+                        novoRecipiente = CriaNovoRecipiente(RecipienteOriginal);
+                    } while (novoRecipiente.Custo < Itens[itemRemovido].Area);
+                    RecipientesAtual.Add(novoRecipiente);
 
                     for (int j = 0; j < Itens.Count; j++)
                     {
@@ -249,7 +261,7 @@ namespace BinPackingProblemParallel.Classes
             lock (this)
             {
                 if (MemoriaAtual[0].Count < 2)
-                   return;
+                    return;
 
                 int recipienteParaRemover = new Random().Next(RecipientesAtual.Count);
 
@@ -268,6 +280,12 @@ namespace BinPackingProblemParallel.Classes
 
                 ReinsereItensUsandoLeftBottomPolicy(itensRemovidos);
             };
+        }
+
+        Recipiente CriaNovoRecipiente(List<Recipiente> recipientesBase)
+        {
+            var recipienteNovo = recipientesBase[new Random().Next(recipientesBase.Count)];
+            return new Recipiente(recipienteNovo.Altura, recipienteNovo.Largura, recipienteNovo.Custo, recipienteNovo.CodigoDoRecipiente);
         }
     }
 }

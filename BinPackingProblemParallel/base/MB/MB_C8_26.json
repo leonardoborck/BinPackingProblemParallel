@@ -1,0 +1,1836 @@
+{
+  "Name": "MB_C8_26",
+  "Items": [
+    {
+      "Height": 71,
+      "Length": 22,
+      "Demand": 1,
+      "Value": 1562,
+      "Reference": 1
+    },
+    {
+      "Height": 12,
+      "Length": 86,
+      "Demand": 1,
+      "Value": 1032,
+      "Reference": 2
+    },
+    {
+      "Height": 16,
+      "Length": 69,
+      "Demand": 1,
+      "Value": 1104,
+      "Reference": 3
+    },
+    {
+      "Height": 75,
+      "Length": 21,
+      "Demand": 1,
+      "Value": 1575,
+      "Reference": 4
+    },
+    {
+      "Height": 26,
+      "Length": 77,
+      "Demand": 1,
+      "Value": 2002,
+      "Reference": 5
+    },
+    {
+      "Height": 44,
+      "Length": 76,
+      "Demand": 1,
+      "Value": 3344,
+      "Reference": 6
+    },
+    {
+      "Height": 39,
+      "Length": 70,
+      "Demand": 1,
+      "Value": 2730,
+      "Reference": 7
+    },
+    {
+      "Height": 2,
+      "Length": 74,
+      "Demand": 1,
+      "Value": 148,
+      "Reference": 8
+    },
+    {
+      "Height": 4,
+      "Length": 24,
+      "Demand": 1,
+      "Value": 96,
+      "Reference": 9
+    },
+    {
+      "Height": 38,
+      "Length": 12,
+      "Demand": 1,
+      "Value": 456,
+      "Reference": 10
+    },
+    {
+      "Height": 23,
+      "Length": 79,
+      "Demand": 1,
+      "Value": 1817,
+      "Reference": 11
+    },
+    {
+      "Height": 2,
+      "Length": 76,
+      "Demand": 1,
+      "Value": 152,
+      "Reference": 12
+    },
+    {
+      "Height": 45,
+      "Length": 95,
+      "Demand": 1,
+      "Value": 4275,
+      "Reference": 13
+    },
+    {
+      "Height": 96,
+      "Length": 21,
+      "Demand": 1,
+      "Value": 2016,
+      "Reference": 14
+    },
+    {
+      "Height": 19,
+      "Length": 96,
+      "Demand": 1,
+      "Value": 1824,
+      "Reference": 15
+    },
+    {
+      "Height": 14,
+      "Length": 30,
+      "Demand": 1,
+      "Value": 420,
+      "Reference": 16
+    },
+    {
+      "Height": 47,
+      "Length": 81,
+      "Demand": 1,
+      "Value": 3807,
+      "Reference": 17
+    },
+    {
+      "Height": 12,
+      "Length": 94,
+      "Demand": 1,
+      "Value": 1128,
+      "Reference": 18
+    },
+    {
+      "Height": 27,
+      "Length": 86,
+      "Demand": 1,
+      "Value": 2322,
+      "Reference": 19
+    },
+    {
+      "Height": 37,
+      "Length": 70,
+      "Demand": 1,
+      "Value": 2590,
+      "Reference": 20
+    },
+    {
+      "Height": 10,
+      "Length": 15,
+      "Demand": 1,
+      "Value": 150,
+      "Reference": 21
+    },
+    {
+      "Height": 41,
+      "Length": 24,
+      "Demand": 1,
+      "Value": 984,
+      "Reference": 22
+    },
+    {
+      "Height": 47,
+      "Length": 85,
+      "Demand": 2,
+      "Value": 3995,
+      "Reference": 23
+    },
+    {
+      "Height": 81,
+      "Length": 45,
+      "Demand": 1,
+      "Value": 3645,
+      "Reference": 24
+    },
+    {
+      "Height": 36,
+      "Length": 78,
+      "Demand": 1,
+      "Value": 2808,
+      "Reference": 25
+    },
+    {
+      "Height": 31,
+      "Length": 78,
+      "Demand": 1,
+      "Value": 2418,
+      "Reference": 26
+    },
+    {
+      "Height": 28,
+      "Length": 91,
+      "Demand": 1,
+      "Value": 2548,
+      "Reference": 27
+    },
+    {
+      "Height": 19,
+      "Length": 44,
+      "Demand": 1,
+      "Value": 836,
+      "Reference": 28
+    },
+    {
+      "Height": 23,
+      "Length": 89,
+      "Demand": 1,
+      "Value": 2047,
+      "Reference": 29
+    },
+    {
+      "Height": 34,
+      "Length": 82,
+      "Demand": 1,
+      "Value": 2788,
+      "Reference": 30
+    },
+    {
+      "Height": 80,
+      "Length": 8,
+      "Demand": 1,
+      "Value": 640,
+      "Reference": 31
+    },
+    {
+      "Height": 84,
+      "Length": 6,
+      "Demand": 1,
+      "Value": 504,
+      "Reference": 32
+    },
+    {
+      "Height": 80,
+      "Length": 10,
+      "Demand": 1,
+      "Value": 800,
+      "Reference": 33
+    },
+    {
+      "Height": 48,
+      "Length": 41,
+      "Demand": 1,
+      "Value": 1968,
+      "Reference": 34
+    },
+    {
+      "Height": 83,
+      "Length": 41,
+      "Demand": 1,
+      "Value": 3403,
+      "Reference": 35
+    },
+    {
+      "Height": 32,
+      "Length": 99,
+      "Demand": 1,
+      "Value": 3168,
+      "Reference": 36
+    },
+    {
+      "Height": 24,
+      "Length": 79,
+      "Demand": 1,
+      "Value": 1896,
+      "Reference": 37
+    },
+    {
+      "Height": 41,
+      "Length": 90,
+      "Demand": 1,
+      "Value": 3690,
+      "Reference": 38
+    },
+    {
+      "Height": 28,
+      "Length": 14,
+      "Demand": 1,
+      "Value": 392,
+      "Reference": 39
+    },
+    {
+      "Height": 4,
+      "Length": 100,
+      "Demand": 1,
+      "Value": 400,
+      "Reference": 40
+    },
+    {
+      "Height": 11,
+      "Length": 72,
+      "Demand": 1,
+      "Value": 792,
+      "Reference": 41
+    },
+    {
+      "Height": 69,
+      "Length": 91,
+      "Demand": 1,
+      "Value": 6279,
+      "Reference": 42
+    },
+    {
+      "Height": 71,
+      "Length": 59,
+      "Demand": 1,
+      "Value": 4189,
+      "Reference": 43
+    },
+    {
+      "Height": 37,
+      "Length": 73,
+      "Demand": 1,
+      "Value": 2701,
+      "Reference": 44
+    },
+    {
+      "Height": 72,
+      "Length": 13,
+      "Demand": 1,
+      "Value": 936,
+      "Reference": 45
+    },
+    {
+      "Height": 9,
+      "Length": 71,
+      "Demand": 1,
+      "Value": 639,
+      "Reference": 46
+    },
+    {
+      "Height": 76,
+      "Length": 68,
+      "Demand": 1,
+      "Value": 5168,
+      "Reference": 47
+    },
+    {
+      "Height": 33,
+      "Length": 89,
+      "Demand": 1,
+      "Value": 2937,
+      "Reference": 48
+    },
+    {
+      "Height": 21,
+      "Length": 84,
+      "Demand": 1,
+      "Value": 1764,
+      "Reference": 49
+    },
+    {
+      "Height": 10,
+      "Length": 92,
+      "Demand": 1,
+      "Value": 920,
+      "Reference": 50
+    },
+    {
+      "Height": 43,
+      "Length": 92,
+      "Demand": 1,
+      "Value": 3956,
+      "Reference": 51
+    },
+    {
+      "Height": 40,
+      "Length": 79,
+      "Demand": 1,
+      "Value": 3160,
+      "Reference": 52
+    },
+    {
+      "Height": 43,
+      "Length": 67,
+      "Demand": 1,
+      "Value": 2881,
+      "Reference": 53
+    },
+    {
+      "Height": 72,
+      "Length": 79,
+      "Demand": 1,
+      "Value": 5688,
+      "Reference": 54
+    },
+    {
+      "Height": 21,
+      "Length": 79,
+      "Demand": 1,
+      "Value": 1659,
+      "Reference": 55
+    },
+    {
+      "Height": 8,
+      "Length": 77,
+      "Demand": 1,
+      "Value": 616,
+      "Reference": 56
+    },
+    {
+      "Height": 27,
+      "Length": 93,
+      "Demand": 1,
+      "Value": 2511,
+      "Reference": 57
+    },
+    {
+      "Height": 47,
+      "Length": 88,
+      "Demand": 1,
+      "Value": 4136,
+      "Reference": 58
+    },
+    {
+      "Height": 11,
+      "Length": 74,
+      "Demand": 1,
+      "Value": 814,
+      "Reference": 59
+    }
+  ],
+  "Objects": [
+    {
+      "Height": 100,
+      "Length": 100,
+      "Cost": 10000,
+      "Reference": 1
+    },
+    {
+      "Height": 76,
+      "Length": 63,
+      "Cost": 4788,
+      "Reference": 2
+    },
+    {
+      "Height": 63,
+      "Length": 65,
+      "Cost": 4095,
+      "Reference": 3
+    },
+    {
+      "Height": 67,
+      "Length": 73,
+      "Cost": 4891,
+      "Reference": 4
+    },
+    {
+      "Height": 94,
+      "Length": 72,
+      "Cost": 6768,
+      "Reference": 5
+    }
+  ],
+  "CuttingPatterns": [
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 51,
+                    "Height": 43,
+                    "Length": 92
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 29,
+                        "Height": 23,
+                        "Length": 89
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 23,
+                        "Length": 3
+                      }
+                    ],
+                    "Height": 23,
+                    "Length": 92
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 30,
+                        "Height": 34,
+                        "Length": 82
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 34,
+                        "Length": 10
+                      }
+                    ],
+                    "Height": 34,
+                    "Length": 92
+                  }
+                ],
+                "Height": 100,
+                "Length": 92
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 31,
+                    "Height": 80,
+                    "Length": 8
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 20,
+                    "Length": 8
+                  }
+                ],
+                "Height": 100,
+                "Length": 8
+              }
+            ],
+            "Height": 100,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 5,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Item",
+            "Item": 41,
+            "Height": 11,
+            "Length": 72
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 7,
+                    "Height": 39,
+                    "Length": 70
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 1,
+                    "Length": 70
+                  }
+                ],
+                "Height": 40,
+                "Length": 70
+              },
+              {
+                "Type": "Leftover",
+                "Height": 40,
+                "Length": 2
+              }
+            ],
+            "Height": 40,
+            "Length": 72
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 53,
+                "Height": 43,
+                "Length": 67
+              },
+              {
+                "Type": "Leftover",
+                "Height": 43,
+                "Length": 5
+              }
+            ],
+            "Height": 43,
+            "Length": 72
+          }
+        ],
+        "Height": 94,
+        "Length": 72
+      }
+    },
+    {
+      "Object": 5,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 3,
+                    "Height": 16,
+                    "Length": 69
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 16,
+                    "Length": 3
+                  }
+                ],
+                "Height": 16,
+                "Length": 72
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Structure",
+                    "Orientation": "H",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 47,
+                        "Height": 76,
+                        "Length": 68
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 2,
+                        "Length": 68
+                      }
+                    ],
+                    "Height": 78,
+                    "Length": 68
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 78,
+                    "Length": 4
+                  }
+                ],
+                "Height": 78,
+                "Length": 72
+              }
+            ],
+            "Height": 94,
+            "Length": 72
+          }
+        ],
+        "Height": 94,
+        "Length": 72
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 39,
+                "Height": 28,
+                "Length": 14
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 45,
+                    "Height": 72,
+                    "Length": 13
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 72,
+                    "Length": 1
+                  }
+                ],
+                "Height": 72,
+                "Length": 14
+              }
+            ],
+            "Height": 100,
+            "Length": 14
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 2,
+                "Height": 12,
+                "Length": 86
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Structure",
+                    "Orientation": "H",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 35,
+                        "Height": 83,
+                        "Length": 41
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 5,
+                        "Length": 41
+                      }
+                    ],
+                    "Height": 88,
+                    "Length": 41
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "H",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 24,
+                        "Height": 81,
+                        "Length": 45
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 7,
+                        "Length": 45
+                      }
+                    ],
+                    "Height": 88,
+                    "Length": 45
+                  }
+                ],
+                "Height": 88,
+                "Length": 86
+              }
+            ],
+            "Height": 100,
+            "Length": 86
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 25,
+                    "Height": 36,
+                    "Length": 78
+                  },
+                  {
+                    "Type": "Item",
+                    "Item": 26,
+                    "Height": 31,
+                    "Length": 78
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 59,
+                        "Height": 11,
+                        "Length": 74
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 11,
+                        "Length": 4
+                      }
+                    ],
+                    "Height": 11,
+                    "Length": 78
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 1,
+                    "Length": 78
+                  }
+                ],
+                "Height": 79,
+                "Length": 78
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 1,
+                    "Height": 71,
+                    "Length": 22
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 8,
+                    "Length": 22
+                  }
+                ],
+                "Height": 79,
+                "Length": 22
+              }
+            ],
+            "Height": 79,
+            "Length": 100
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 15,
+                "Height": 19,
+                "Length": 96
+              },
+              {
+                "Type": "Leftover",
+                "Height": 19,
+                "Length": 4
+              }
+            ],
+            "Height": 19,
+            "Length": 100
+          },
+          {
+            "Type": "Leftover",
+            "Height": 2,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 4,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 44,
+                "Height": 37,
+                "Length": 73
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 46,
+                    "Height": 9,
+                    "Length": 71
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 9,
+                    "Length": 2
+                  }
+                ],
+                "Height": 9,
+                "Length": 73
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 28,
+                    "Height": 19,
+                    "Length": 44
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 19,
+                    "Length": 29
+                  }
+                ],
+                "Height": 19,
+                "Length": 73
+              },
+              {
+                "Type": "Leftover",
+                "Height": 2,
+                "Length": 73
+              }
+            ],
+            "Height": 67,
+            "Length": 73
+          }
+        ],
+        "Height": 67,
+        "Length": 73
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 18,
+                    "Height": 12,
+                    "Length": 94
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 12,
+                    "Length": 6
+                  }
+                ],
+                "Height": 12,
+                "Length": 100
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 38,
+                    "Height": 41,
+                    "Length": 90
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 41,
+                    "Length": 10
+                  }
+                ],
+                "Height": 41,
+                "Length": 100
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 23,
+                    "Height": 47,
+                    "Length": 85
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 47,
+                    "Length": 15
+                  }
+                ],
+                "Height": 47,
+                "Length": 100
+              }
+            ],
+            "Height": 100,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 50,
+                        "Height": 10,
+                        "Length": 92
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 10,
+                        "Length": 2
+                      }
+                    ],
+                    "Height": 10,
+                    "Length": 94
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 42,
+                        "Height": 69,
+                        "Length": 91
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 69,
+                        "Length": 3
+                      }
+                    ],
+                    "Height": 69,
+                    "Length": 94
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 55,
+                        "Height": 21,
+                        "Length": 79
+                      },
+                      {
+                        "Type": "Structure",
+                        "Orientation": "H",
+                        "Children": [
+                          {
+                            "Type": "Item",
+                            "Item": 21,
+                            "Height": 10,
+                            "Length": 15
+                          },
+                          {
+                            "Type": "Leftover",
+                            "Height": 11,
+                            "Length": 15
+                          }
+                        ],
+                        "Height": 21,
+                        "Length": 15
+                      }
+                    ],
+                    "Height": 21,
+                    "Length": 94
+                  }
+                ],
+                "Height": 100,
+                "Length": 94
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 32,
+                    "Height": 84,
+                    "Length": 6
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 16,
+                    "Length": 6
+                  }
+                ],
+                "Height": 100,
+                "Length": 6
+              }
+            ],
+            "Height": 100,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Item",
+            "Item": 40,
+            "Height": 4,
+            "Length": 100
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 58,
+                    "Height": 47,
+                    "Length": 88
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 17,
+                        "Height": 47,
+                        "Length": 81
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 47,
+                        "Length": 7
+                      }
+                    ],
+                    "Height": 47,
+                    "Length": 88
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 12,
+                        "Height": 2,
+                        "Length": 76
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 2,
+                        "Length": 12
+                      }
+                    ],
+                    "Height": 2,
+                    "Length": 88
+                  }
+                ],
+                "Height": 96,
+                "Length": 88
+              },
+              {
+                "Type": "Leftover",
+                "Height": 96,
+                "Length": 12
+              }
+            ],
+            "Height": 96,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 5,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 20,
+                "Height": 37,
+                "Length": 70
+              },
+              {
+                "Type": "Leftover",
+                "Height": 37,
+                "Length": 2
+              }
+            ],
+            "Height": 37,
+            "Length": 72
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 34,
+                    "Height": 48,
+                    "Length": 41
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 9,
+                    "Length": 41
+                  }
+                ],
+                "Height": 57,
+                "Length": 41
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Item",
+                        "Item": 16,
+                        "Height": 14,
+                        "Length": 30
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 14,
+                        "Length": 1
+                      }
+                    ],
+                    "Height": 14,
+                    "Length": 31
+                  },
+                  {
+                    "Type": "Structure",
+                    "Orientation": "V",
+                    "Children": [
+                      {
+                        "Type": "Structure",
+                        "Orientation": "H",
+                        "Children": [
+                          {
+                            "Type": "Item",
+                            "Item": 22,
+                            "Height": 41,
+                            "Length": 24
+                          },
+                          {
+                            "Type": "Leftover",
+                            "Height": 2,
+                            "Length": 24
+                          }
+                        ],
+                        "Height": 43,
+                        "Length": 24
+                      },
+                      {
+                        "Type": "Leftover",
+                        "Height": 43,
+                        "Length": 7
+                      }
+                    ],
+                    "Height": 43,
+                    "Length": 31
+                  }
+                ],
+                "Height": 57,
+                "Length": 31
+              }
+            ],
+            "Height": 57,
+            "Length": 72
+          }
+        ],
+        "Height": 94,
+        "Length": 72
+      }
+    },
+    {
+      "Object": 2,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 43,
+                "Height": 71,
+                "Length": 59
+              },
+              {
+                "Type": "Leftover",
+                "Height": 71,
+                "Length": 4
+              }
+            ],
+            "Height": 71,
+            "Length": 63
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 9,
+                    "Height": 4,
+                    "Length": 24
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 1,
+                    "Length": 24
+                  }
+                ],
+                "Height": 5,
+                "Length": 24
+              },
+              {
+                "Type": "Leftover",
+                "Height": 5,
+                "Length": 39
+              }
+            ],
+            "Height": 5,
+            "Length": 63
+          }
+        ],
+        "Height": 76,
+        "Length": 63
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 36,
+                "Height": 32,
+                "Length": 99
+              },
+              {
+                "Type": "Leftover",
+                "Height": 32,
+                "Length": 1
+              }
+            ],
+            "Height": 32,
+            "Length": 100
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 23,
+                "Height": 47,
+                "Length": 85
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "H",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 10,
+                    "Height": 38,
+                    "Length": 12
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 9,
+                    "Length": 12
+                  }
+                ],
+                "Height": 47,
+                "Length": 12
+              },
+              {
+                "Type": "Leftover",
+                "Height": 47,
+                "Length": 3
+              }
+            ],
+            "Height": 47,
+            "Length": 100
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 49,
+                "Height": 21,
+                "Length": 84
+              },
+              {
+                "Type": "Leftover",
+                "Height": 21,
+                "Length": 16
+              }
+            ],
+            "Height": 21,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 37,
+                "Height": 24,
+                "Length": 79
+              },
+              {
+                "Type": "Item",
+                "Item": 11,
+                "Height": 23,
+                "Length": 79
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 56,
+                    "Height": 8,
+                    "Length": 77
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 8,
+                    "Length": 2
+                  }
+                ],
+                "Height": 8,
+                "Length": 79
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 6,
+                    "Height": 44,
+                    "Length": 76
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 44,
+                    "Length": 3
+                  }
+                ],
+                "Height": 44,
+                "Length": 79
+              },
+              {
+                "Type": "Leftover",
+                "Height": 1,
+                "Length": 79
+              }
+            ],
+            "Height": 100,
+            "Length": 79
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 14,
+                "Height": 96,
+                "Length": 21
+              },
+              {
+                "Type": "Leftover",
+                "Height": 4,
+                "Length": 21
+              }
+            ],
+            "Height": 100,
+            "Length": 21
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 48,
+                    "Height": 33,
+                    "Length": 89
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 33,
+                    "Length": 1
+                  }
+                ],
+                "Height": 33,
+                "Length": 90
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 19,
+                    "Height": 27,
+                    "Length": 86
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 27,
+                    "Length": 4
+                  }
+                ],
+                "Height": 27,
+                "Length": 90
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 52,
+                    "Height": 40,
+                    "Length": 79
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 40,
+                    "Length": 11
+                  }
+                ],
+                "Height": 40,
+                "Length": 90
+              }
+            ],
+            "Height": 100,
+            "Length": 90
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 33,
+                "Height": 80,
+                "Length": 10
+              },
+              {
+                "Type": "Leftover",
+                "Height": 20,
+                "Length": 10
+              }
+            ],
+            "Height": 100,
+            "Length": 10
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "V",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 54,
+                "Height": 72,
+                "Length": 79
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 5,
+                    "Height": 26,
+                    "Length": 77
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 26,
+                    "Length": 2
+                  }
+                ],
+                "Height": 26,
+                "Length": 79
+              },
+              {
+                "Type": "Structure",
+                "Orientation": "V",
+                "Children": [
+                  {
+                    "Type": "Item",
+                    "Item": 8,
+                    "Height": 2,
+                    "Length": 74
+                  },
+                  {
+                    "Type": "Leftover",
+                    "Height": 2,
+                    "Length": 5
+                  }
+                ],
+                "Height": 2,
+                "Length": 79
+              }
+            ],
+            "Height": 100,
+            "Length": 79
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "H",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 4,
+                "Height": 75,
+                "Length": 21
+              },
+              {
+                "Type": "Leftover",
+                "Height": 25,
+                "Length": 21
+              }
+            ],
+            "Height": 100,
+            "Length": 21
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    },
+    {
+      "Object": 1,
+      "Root": {
+        "Type": "Structure",
+        "Orientation": "H",
+        "Children": [
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 13,
+                "Height": 45,
+                "Length": 95
+              },
+              {
+                "Type": "Leftover",
+                "Height": 45,
+                "Length": 5
+              }
+            ],
+            "Height": 45,
+            "Length": 100
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 57,
+                "Height": 27,
+                "Length": 93
+              },
+              {
+                "Type": "Leftover",
+                "Height": 27,
+                "Length": 7
+              }
+            ],
+            "Height": 27,
+            "Length": 100
+          },
+          {
+            "Type": "Structure",
+            "Orientation": "V",
+            "Children": [
+              {
+                "Type": "Item",
+                "Item": 27,
+                "Height": 28,
+                "Length": 91
+              },
+              {
+                "Type": "Leftover",
+                "Height": 28,
+                "Length": 9
+              }
+            ],
+            "Height": 28,
+            "Length": 100
+          }
+        ],
+        "Height": 100,
+        "Length": 100
+      }
+    }
+  ]
+}
