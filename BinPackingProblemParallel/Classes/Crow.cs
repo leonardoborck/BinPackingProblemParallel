@@ -14,6 +14,7 @@ namespace BinPackingProblemParallel.Classes
         public List<List<int>> MemoriaAtual;
         public List<List<int>> MelhorMemoria;
         public double AvaliacaoDaMelhorSolucao;
+        public double AvaliacaoMetodoGardeynWauters;
 
         public List<Item> Itens;
 
@@ -40,6 +41,7 @@ namespace BinPackingProblemParallel.Classes
             MemoriaAtual = new List<List<int>>();
             MelhorMemoria = new List<List<int>>();
             AvaliacaoDaMelhorSolucao = 0;
+            AvaliacaoMetodoGardeynWauters = 0;
         }
 
         public void GeraSolucaoInicialAleatoria(int z)
@@ -67,6 +69,7 @@ namespace BinPackingProblemParallel.Classes
             MelhorMemoria = MemoriaAtual;
             MelhorRecipientes = RecipientesAtual;
             AvaliacaoDaMelhorSolucao = AvaliaSolucao(MelhorMemoria, MelhorRecipientes, z);
+            AvaliacaoMetodoGardeynWauters = AvaliaSolucao(MelhorMemoria, MelhorRecipientes, 1);
         }
 
         public void CorrigeSolucoesInviaveis()
@@ -214,6 +217,7 @@ namespace BinPackingProblemParallel.Classes
             MelhorMemoria = MemoriaAtual;
             MelhorRecipientes = RecipientesAtual;
             AvaliacaoDaMelhorSolucao = solucaoAtual;
+            AvaliacaoMetodoGardeynWauters = AvaliaSolucao(MemoriaAtual, RecipientesAtual, 1);
 
             return true;
         }

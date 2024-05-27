@@ -85,17 +85,17 @@ internal class Program
                 Crow corvo = crowSearch.BuscaDoCorvo(flightSize, z, maxIteration);
                 watch.Stop();
 
-                concurrentBag.Add($"{baseDeDados.Nome},{watch.ElapsedMilliseconds},{corvo.AvaliacaoDaMelhorSolucao},{corvo.MelhorRecipientes.Count},{flocksize},{flightSize},{maxIteration}");
+                concurrentBag.Add($"{baseDeDados.Nome},{watch.ElapsedMilliseconds},{corvo.AvaliacaoDaMelhorSolucao},{corvo.AvaliacaoMetodoGardeynWauters},{corvo.MelhorRecipientes.Count},{flocksize},{flightSize},{maxIteration}");
             });
         }
 
-        var arquivoDeTeste = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\teste_AleatorioNovo.csv";//"{classes[0]}.csv";
+        var arquivoDeTeste = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\teste_AleatorioNovoGardeyn.csv";//"{classes[0]}.csv";
         File.Delete(arquivoDeTeste);
         try
         {
             using (StreamWriter w = File.AppendText(arquivoDeTeste))
             {
-                w.WriteLine($"Instancia,Tempo(ms),Utilizacao,Recipientes,TamanhoDoBando,TamanhoDoVoo,IteracoesMaximas");
+                w.WriteLine($"Instancia,Tempo(ms),UtilizacaoReal,UtilizacaoGardeynWauters,Recipientes,TamanhoDoBando,TamanhoDoVoo,IteracoesMaximas");
                 foreach (string texto in concurrentBag)
                 {
                     w.WriteLine(texto);
