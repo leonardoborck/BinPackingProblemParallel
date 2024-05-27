@@ -3,7 +3,7 @@
 
 Este projeto foi desenvolvido como trabalho de conclusão de curso para o bacharelado em ciência da computação da Universidade Do Vale do Itajaí.
 
-Neste trabalho foram propostos dois algoritmos, uma Busca Local Iterada e Um Algoritmo do Corvo Binário Modificado.
+Neste trabalho foram propostos dois algoritmos, uma Busca Local Iterada e Um Algoritmo de Busca do Corvo Binária Modificado.
 
 Neste repositório foram desenvolvidos dois projetos, inicialmente proposto em C++ e posteriormente migrado para C# devido a facilidade do uso de Paralelismo que fez com que o tempo de execução fosse da Busca do Corvo passase de 40h para execução dos testes para apenas 50 minutos.
 
