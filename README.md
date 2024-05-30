@@ -9,6 +9,8 @@ Neste repositório foram desenvolvidos dois projetos, inicialmente proposto em C
 
 #### Todos os testes realizados estão presentes nesse repositório como arquivos de texto em XLSX e CSV.
 
+#### Ambiente de execução
+Todos as execuções foram efetuadas através do Visual Studio 2022.
 
 
 
